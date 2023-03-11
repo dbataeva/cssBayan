@@ -1,20 +1,50 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
 html {
 	box-sizing: border-box;
 	background: aliceblue;
 	font-family: 'helvetica neue';
-	font-size: 20px;
-	font-weight: 200;
 }
 
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin: 0;
+    padding: 10% 0;
+
+    overflow: scroll;
+}
+
+input {
+    display: none;
 }
 
 .bayan-container {
@@ -23,11 +53,31 @@ body {
     display: flex;
     flex-direction: column;
 
-    font-size: 12px;
-    font-weight: 100;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.segment-container {
+    width: 100%;
+    height: 42px;
+    overflow: hidden;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #081623;
+
+    transition: all 0.5s;
+}
+
+.segment-container:last-child {
+    border-bottom: none;
 }
 
 .header-container {
+    width: 100%;
+
+    gap: 8px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,18 +85,66 @@ body {
     font-family: 'Neucha';
 }
 
+.icon-wrapper {
+    width: 36px;
+    height: 34px;
+
+    background: center / contain url("./assets/icons/closeDefault.svg");
+
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+input:checked + .segment-container {
+    width: 100%;
+    height: 244px;
+}
+
+input:checked+.segment-container .icon-wrapper {
+    transform: rotate(0);
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 190px;
+}
+
+.image-wrapper1 {
+    background: center / contain no-repeat url("./assets/images/wolf1.jpeg");
+}
+
+.image-wrapper2 {
+    background: center / contain no-repeat url("./assets/images/wolf2.jpeg");
+}
+
+.image-wrapper3 {
+    background: center / contain no-repeat url("./assets/images/wolf3.jpeg");
+}
+
+.image-wrapper4 {
+    background: center / contain no-repeat url("./assets/images/wolf4.jpeg");
+}
+
+.image-wrapper5 {
+    background: center / contain no-repeat url("./assets/images/wolf5.jpeg");
+}
+
+.image-wrapper6 {
+    background: center / contain no-repeat url("./assets/images/wolf6.jpeg");
+}
+
 /* tablet */
 @media screen and (min-width: 820px) and (min-height: 820px)  {
     .bayan-container {
-        font-size: 16px;
-	    font-weight: 100;
+        font-size: 28px;
+	    font-weight: 200;
     }
 }
 
 /* desktop */
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
     .bayan-container {
-        font-size: 20px;
+        font-size: 32px;
 	    font-weight: 200;
     }
 }
