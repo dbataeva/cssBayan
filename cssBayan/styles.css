@@ -24,7 +24,6 @@ dd {
 html {
 	box-sizing: border-box;
 	background: aliceblue;
-	font-family: 'helvetica neue';
 }
 
 body {
@@ -38,8 +37,6 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 10% 0;
-
     overflow: scroll;
 }
 
@@ -48,13 +45,20 @@ input {
 }
 
 .bayan-container {
-    max-width: 90%;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+
+    padding: 0 0 5%;
 
     display: flex;
     flex-direction: column;
 
     font-size: 24px;
     font-weight: 200;
+
+    font-family: 'helvetica neue';
 }
 
 .segment-container {
@@ -76,8 +80,6 @@ input {
 .header-container {
     width: 100%;
 
-    gap: 8px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,11 +87,15 @@ input {
     font-family: 'Neucha';
 }
 
+.text-wrapper {
+    width: calc(100% - 34px);
+}
+
 .icon-wrapper {
-    width: 36px;
+    width: 34px;
     height: 34px;
 
-    background: center / contain url("./assets/icons/closeDefault.svg");
+    background: center / cover url("./assets/icons/closeDefault.svg");
 
     transform: rotate(45deg);
     transition: all 0.5s;
@@ -97,7 +103,7 @@ input {
 
 input:checked + .segment-container {
     width: 100%;
-    height: 244px;
+    height: 430px;
 }
 
 input:checked+.segment-container .icon-wrapper {
@@ -106,31 +112,35 @@ input:checked+.segment-container .icon-wrapper {
 
 .image-wrapper {
     width: 100%;
-    height: 190px;
+    height: 382px;
 }
 
 .image-wrapper1 {
-    background: center / contain no-repeat url("./assets/images/wolf1.jpeg");
+    background: center / cover no-repeat url("./assets/images/wolf1.jpeg");
+    background-position-x: 60%;
 }
 
 .image-wrapper2 {
-    background: center / contain no-repeat url("./assets/images/wolf2.jpeg");
+    background: center / cover no-repeat url("./assets/images/wolf2.jpeg");
+    background-position-x: 80%;
 }
 
 .image-wrapper3 {
-    background: center / contain no-repeat url("./assets/images/wolf3.jpeg");
+    background: center / cover no-repeat url("./assets/images/wolf3.jpeg");
+    background-position-x: 40%;
 }
 
 .image-wrapper4 {
-    background: center / contain no-repeat url("./assets/images/wolf4.jpeg");
+    background: center / cover no-repeat url("./assets/images/wolf4.jpeg");
+    background-position-x: 80%;
 }
 
 .image-wrapper5 {
-    background: center / contain no-repeat url("./assets/images/wolf5.jpeg");
+    background: center / cover no-repeat url("./assets/images/wolf5.jpeg");
 }
 
 .image-wrapper6 {
-    background: center / contain no-repeat url("./assets/images/wolf6.jpeg");
+    background: center / cover no-repeat url("./assets/images/wolf6.jpeg");
 }
 
 /* tablet */
@@ -138,6 +148,23 @@ input:checked+.segment-container .icon-wrapper {
     .bayan-container {
         font-size: 28px;
 	    font-weight: 200;
+    }
+
+    .segment-container {
+        height: 50px;
+    }
+
+    input:checked + .segment-container {
+        height: 612px;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 554px;
+    }
+
+    .image-wrapper4 {
+        background-position-y: 10%;
     }
 }
 
