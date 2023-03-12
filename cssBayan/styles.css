@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+	box-sizing: border-box;
+	background: aliceblue;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: scroll;
+}
+
+input {
+    display: none;
+}
+
+.bayan-container {
+    width: 90%;
+    max-width: 24em;
+
+    margin: 5% 0;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5em;
+    font-weight: 200;
+
+    font-family: 'helvetica neue';
+}
+
+.segment-container {
+    width: 100%;
+    height: 1.5em;
+    overflow: hidden;
+
+    padding: 0.25em 0;
+
+    border-bottom: 0.01em solid #081623;
+
+    transition: all 0.5s;
+}
+
+.segment-container:active {
+    color: gray;
+}
+
+.segment-container:last-child {
+    border-bottom: none;
+}
+
+.segment-container:active label {
+    opacity: 0.75;
+}
+
+.header-container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: 'Neucha';
+}
+
+.text-wrapper {
+    width: calc(100% - 1em);
+}
+
+.icon-wrapper {
+    width: 1em;
+    height: 1em;
+
+    background: center / cover url("./assets/icons/closeDefault.svg");
+
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+input:checked + .segment-container {
+    width: 100%;
+    height: 18em;
+}
+
+input:checked+.segment-container .icon-wrapper {
+    transform: rotate(0);
+}
+
+label:active {
+    opacity: 0.75;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 16em;
+
+    display: block;
+}
+
+.image-wrapper1 {
+    background: center / cover no-repeat url("./assets/images/wolf1.jpeg");
+    background-position-x: 60%;
+}
+
+.image-wrapper2 {
+    background: center / cover no-repeat url("./assets/images/wolf2.jpeg");
+    background-position-x: 80%;
+}
+
+.image-wrapper3 {
+    background: center / cover no-repeat url("./assets/images/wolf3.jpeg");
+    background-position-x: 40%;
+}
+
+.image-wrapper4 {
+    background: center / cover no-repeat url("./assets/images/wolf4.jpeg");
+    background-position-x: 80%;
+}
+
+.image-wrapper5 {
+    background: center / cover no-repeat url("./assets/images/wolf5.jpeg");
+}
+
+.image-wrapper6 {
+    background: center / cover no-repeat url("./assets/images/wolf6.jpeg");
+}
+
+/* tablet */
+@media screen and (min-width: 820px) and (min-height: 820px)  {
+    .bayan-container {
+        font-size: 2em;
+	    font-weight: 200;
+    }
+
+    .segment-container {
+        height: 1.7em;
+    }
+
+    input:checked + .segment-container {
+        height: 19.5em;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 17.5em;
+    }
+
+    .image-wrapper4 {
+        background-position-y: 10%;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+    .bayan-container {
+        font-size: 2.5em;
+	    font-weight: 200;
+    }
+
+    .segment-container {
+        height: 1.7em;
+    }
+
+    input:checked + .segment-container {
+        height: 18em;
+    }
+
+    .icon-wrapper {
+        opacity: 0;
+    }
+
+    .bayan-container {
+        cursor: pointer;
+    }
+
+    .bayan-container:hover .segment-container .icon-wrapper {
+        opacity: 1;
+    }
+
+    .segment-container {
+        cursor: pointer;
+    }
+
+    .segment-container:hover {
+        height: 18em;
+    }
+
+    .segment-container:hover .icon-wrapper {
+        transform: rotate(0);
+    }
+
+    .header-container {
+        cursor: pointer;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 16em;
+    }
+
+    .image-wrapper:hover {
+        border: 0.01px solid #081623;
+    }
+}
