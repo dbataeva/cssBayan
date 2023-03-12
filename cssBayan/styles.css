@@ -161,11 +161,11 @@ label:active {
     }
 
     .segment-container {
-        height: 54px;
+        height: 1.7em;
     }
 
     input:checked + .segment-container {
-        height: 1146px;
+        height: 29em;
     }
 
     .icon-wrapper {
@@ -185,7 +185,7 @@ label:active {
     }
 
     .segment-container:hover {
-        height: 1146px;
+        height: 29em;
     }
 
     .segment-container:hover .icon-wrapper {
@@ -202,10 +202,10 @@ label:active {
 
     .image-wrapper {
         width: 100%;
-        height: 1080px;
+        height: 27em;
     }
 
     .image-wrapper:hover {
-        border: 1px solid #081623;
+        border: 0.01px solid #081623;
     }
 }
