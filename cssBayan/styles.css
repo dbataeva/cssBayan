@@ -2,29 +2,14 @@
     box-sizing: border-box;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
-
 html {
 	box-sizing: border-box;
 	background: aliceblue;
 }
 
 body {
+    margin: 0;
+
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
@@ -49,7 +34,7 @@ input {
     display: flex;
     flex-direction: column;
 
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 200;
 
     font-family: 'helvetica neue';
@@ -57,12 +42,12 @@ input {
 
 .segment-container {
     width: 100%;
-    height: 42px;
+    height: 1.5em;
     overflow: hidden;
 
-    padding: 8px 0;
+    padding: 0.25em 0;
 
-    border-bottom: 1px solid #081623;
+    border-bottom: 0.01em solid #081623;
 
     transition: all 0.5s;
 }
@@ -82,12 +67,12 @@ input {
 }
 
 .text-wrapper {
-    width: calc(100% - 34px);
+    width: calc(100% - 1em);
 }
 
 .icon-wrapper {
-    width: 34px;
-    height: 34px;
+    width: 1em;
+    height: 1em;
 
     background: center / cover url("./assets/icons/closeDefault.svg");
 
@@ -97,7 +82,7 @@ input {
 
 input:checked + .segment-container {
     width: 100%;
-    height: 430px;
+    height: 18em;
 }
 
 input:checked+.segment-container .icon-wrapper {
@@ -110,14 +95,10 @@ label:active {
 
 .image-wrapper {
     width: 100%;
-    height: 382px;
+    height: 16em;
 
     display: block;
 }
-
-/* .image-wrapper:active {
-    opacity: 0.75;
-} */
 
 .image-wrapper1 {
     background: center / cover no-repeat url("./assets/images/wolf1.jpeg");
@@ -150,7 +131,7 @@ label:active {
 /* tablet */
 @media screen and (min-width: 820px) and (min-height: 820px)  {
     .bayan-container {
-        font-size: 28px;
+        font-size: 2em;
 	    font-weight: 200;
     }
 
@@ -175,7 +156,7 @@ label:active {
 /* desktop */
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
     .bayan-container {
-        font-size: 36px;
+        font-size: 2.5em;
 	    font-weight: 200;
     }
 
