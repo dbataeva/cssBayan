@@ -28,8 +28,9 @@ input {
 
 .bayan-container {
     width: 90%;
+    max-width: 24em;
 
-    padding: 5% 0;
+    margin: 5% 0;
 
     display: flex;
     flex-direction: column;
@@ -52,8 +53,16 @@ input {
     transition: all 0.5s;
 }
 
+.segment-container:active {
+    color: gray;
+}
+
 .segment-container:last-child {
     border-bottom: none;
+}
+
+.segment-container:active label {
+    opacity: 0.75;
 }
 
 .header-container {
@@ -165,7 +174,7 @@ label:active {
     }
 
     input:checked + .segment-container {
-        height: 29em;
+        height: 18em;
     }
 
     .icon-wrapper {
@@ -185,7 +194,7 @@ label:active {
     }
 
     .segment-container:hover {
-        height: 29em;
+        height: 18em;
     }
 
     .segment-container:hover .icon-wrapper {
@@ -202,7 +211,7 @@ label:active {
 
     .image-wrapper {
         width: 100%;
-        height: 27em;
+        height: 16em;
     }
 
     .image-wrapper:hover {
