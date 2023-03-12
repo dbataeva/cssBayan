@@ -27,7 +27,6 @@ html {
 }
 
 body {
-    width: 100vw;
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
@@ -113,6 +112,8 @@ input:checked+.segment-container .icon-wrapper {
 .image-wrapper {
     width: 100%;
     height: 382px;
+    
+    display: block;
 }
 
 .image-wrapper1 {
@@ -179,8 +180,36 @@ input:checked+.segment-container .icon-wrapper {
         height: 54px;
     }
 
-    input:checked+.segment-container {
+    input:checked + .segment-container {
         height: 1146px;
+    }
+
+    .icon-wrapper {
+        opacity: 0;
+    }
+
+    .bayan-container {
+        cursor: pointer;
+    }
+
+    .bayan-container:hover .segment-container .icon-wrapper {
+        opacity: 1;
+    }
+
+    .segment-container {
+        cursor: pointer;
+    }
+
+    .segment-container:hover {
+        height: 1146px;
+    }
+
+    .header-container {
+        cursor: pointer;
+    }
+
+    label {
+        cursor: pointer;
     }
 
     .image-wrapper {
